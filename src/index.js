@@ -11,37 +11,46 @@ function getAuthor() {
 const App = () => {
   return (
     <div className="ui container comments">
-      <ApprovalCard />
-      <CommentDetail
-        time="Tomorrow at 2:22 AM"
-        avatar={faker.image.avatar()}
-        author={getAuthor()}
-        text={faker.hacker.phrase()}
-      />
-      <CommentDetail
-        time="Today at 11:59 PM"
-        avatar={faker.image.avatar()}
-        author={getAuthor()}
-        text={faker.hacker.phrase()}
-      />
-      <CommentDetail
-        time="Dec. 25 at 3:33 PM"
-        avatar={faker.image.avatar()}
-        author={getAuthor()}
-        text={faker.hacker.phrase()}
-      />
-      <CommentDetail
-        time="Jun. 9 at 1:23 PM"
-        avatar={faker.image.avatar()}
-        author={getAuthor()}
-        text={faker.hacker.phrase()}
-      />
-      <CommentDetail
-        time="Apr. 20 at 4:20 PM"
-        avatar={faker.image.avatar()}
-        author={getAuthor()}
-        text={faker.hacker.phrase()}
-      />
+      <ApprovalCard>
+        <CommentDetail
+          time="Tomorrow at 2:22 AM"
+          avatar={faker.image.avatar()}
+          author={getAuthor()}
+          text={faker.hacker.phrase()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          time="Today at 11:59 PM"
+          avatar={faker.image.avatar()}
+          author={getAuthor()}
+          text={faker.hacker.phrase()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          time="Dec. 25 at 3:33 PM"
+          avatar={faker.image.avatar()}
+          author={getAuthor()}
+          text={faker.hacker.phrase()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          time="Jun. 9 at 1:23 PM"
+          avatar={faker.image.avatar()}
+          author={getAuthor()}
+          text={faker.hacker.phrase()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          time="Apr. 20 at 4:20 PM"
+          avatar={faker.image.avatar()}
+          author={getAuthor()}
+          text={faker.hacker.phrase()}
+        />
+      </ApprovalCard>
     </div>
   );
 };
