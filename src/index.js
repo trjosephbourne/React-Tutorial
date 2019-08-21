@@ -1,32 +1,26 @@
-// Import the React and ReactDOM libraries
 import React from "react";
-// Note that it is possible to require a module
 import ReactDOM from "react-dom";
+import faker from "faker";
 
-// Mult buttons
-function getButtonText() {
-  return "Click on me!";
-}
-
-// Create a react component
 const App = () => {
   return (
-    <div>
-      <label className="label" htmlFor="name">
-        Enter name:
-      </label>
-      <input id="name" type="text" />
-      <button
-        style={{
-          backgroundColor: "blue",
-          color: "white"
-        }}
-      >
-        {getButtonText()}
-      </button>
+    <div className="ui container comments">
+      <div className="comment">
+        <a href="/" className="avatar">
+          <img alt="avatar" src={faker.image.avatar()} />
+        </a>
+        <div className="content">
+          <a href="/" className="author">
+            {faker.hacker.noun()}
+          </a>
+          <div className="metadata">
+            <span className="date">Tomorrow at 4:20 PM</span>
+          </div>
+          <div className="text">Nice blog post!</div>
+        </div>
+      </div>
     </div>
   );
 };
 
-// Show react component on screen
 ReactDOM.render(<App />, document.querySelector("#root"));
