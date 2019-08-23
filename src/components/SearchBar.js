@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class SearchBar extends Component {
   state = { term: "" };
 
-  onFormSubmit(ev) {
+  onFormSubmit = ev => {
     ev.preventDefault();
     console.log(`Sent ${this.state.term}`);
-  }
+  };
 
   render() {
     return (
