@@ -16,7 +16,7 @@ class App extends React.Component {
     );
   }
 
-  render() {
+  renderContent() {
     if (this.state.errorMsg && !this.state.lat) {
       return <div>Error: {this.state.errorMsg}</div>;
     }
@@ -26,6 +26,10 @@ class App extends React.Component {
     }
 
     return <Spinner msg="Pls allow" />;
+  }
+
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
