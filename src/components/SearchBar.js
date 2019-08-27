@@ -5,7 +5,8 @@ class SearchBar extends Component {
 
   onFormSubmit = ev => {
     ev.preventDefault();
-    console.log(`Sent ${this.state.term}`);
+
+    this.props.onSubmit(this.state.term);
   };
 
   render() {
