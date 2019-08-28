@@ -10,7 +10,7 @@ export default class SearchBar extends Component {
   onFormSubmit = ev => {
     ev.preventDefault();
 
-    //TODO update when user sets search term
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
