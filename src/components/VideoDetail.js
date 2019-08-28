@@ -12,7 +12,7 @@ export default class VideoDetail extends Component {
     return (
       <div>
         <div className="ui embed">
-          <iframe src={videoSrc} />
+          <iframe title="Video Title" src={videoSrc} />
         </div>
         <div className="ui segment">
           <h4 className="ui header">{video.snippet.title}</h4>
