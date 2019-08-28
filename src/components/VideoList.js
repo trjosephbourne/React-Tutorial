@@ -3,8 +3,9 @@ import VideoItem from "./VideoItem";
 
 export default class VideoList extends Component {
   render() {
+    const onVideoSelect = this.props.onVideoSelect;
     const renderedList = this.props.videos.map(video => {
-      return <VideoItem video={video} />;
+      return <VideoItem onVideoSelect={onVideoSelect} video={video} />;
     });
 
     return <div className="ui relaxed divided list">{renderedList}</div>;
